@@ -5,4 +5,5 @@ describe("class Account()", () => {
   it("returns balance", () => {
     expect(account.returnBalance()).toEqual(500);
   });
+  
 });
