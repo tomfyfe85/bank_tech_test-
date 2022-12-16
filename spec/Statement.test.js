@@ -3,7 +3,7 @@ const statement = new Statement();
 
 describe("class Statement()", () => {
   it("gives an empty array", () => {
-    expect(statement.printStatement()).toEqual([]);
+    expect(statement.printStatement ()).toEqual([]);
   });
 
 });
