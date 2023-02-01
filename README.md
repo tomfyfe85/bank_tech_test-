@@ -21,11 +21,11 @@ Things I didn't do in the final app:
 add a withdrawal function,
 add date functionality,
 format so printStatement would look like the above when returned,
-added comments to help other devs in the furture.
+added comments to help other devs in the future.
 
 Included is a file called bank.js which will give you an idea of what I was going for.
 
-### _This is written in JavaScript, to be run on node and tested with jest so please see below for installation guidence if needed so please use node to run_
+### _This is written in JavaScript, to be run on node and tested with jest so please see below for installation guidance if needed so please use node to run_
 
 **Javascript install in command line:** <br/>
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -51,7 +51,7 @@ Create the project directory:
 $ mkdir my-project
 $ cd my-project
 
-Initialise the NPM project (this will create a file package.json)
+Initialize the NPM project (this will create a file package.json)
 $ npm init -y
 
  Add the jest package to our project
