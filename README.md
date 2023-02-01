@@ -7,10 +7,10 @@ This a incomplete, very basic banking app.
 Below is the given criteria.
 
 Given a client makes a deposit of 1000 on 10-01-2023
-And a deposit of 2000 on 13-01-2023
-And a withdrawal of 500 on 14-01-2023
-When she prints her bank statement
-Then she would see
+and a deposit of 2000 on 13-01-2023
+and a withdrawal of 500 on 14-01-2023,
+when she prints her bank statement then 
+she would see:
 
 date || credit || debit || balance <br/>
 14/01/2023 || || 500.00 || 2500.00 <br/>
