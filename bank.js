@@ -14,6 +14,7 @@ class Bank {
     const newBalIn = `${this.dateString} || ${sumIn} || || ${this.final}`;
     this.array.push(newBalIn);
     this.remainingSum = this.final;
+    return
   }
 
   withDraw(sumOut) {
