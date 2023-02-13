@@ -1,6 +1,6 @@
 // This separation of concerns needs to be applied. 
 // IE create new Transaction class and Date class as separate modules
-// Complete "returns date, amount deposited, new balance" test in Account.js
+
 
 Date- 
 create new date class module
@@ -8,7 +8,10 @@ create new date class module
 
 Account & Transaction classes
 remove deposit and withdraw from account. Make a Transaction class.
+
 // INT TEST account/transaction/date
+Test deposit
+Test withdrawal 
 
 
 Statement class must return data from other dates in correct order.
