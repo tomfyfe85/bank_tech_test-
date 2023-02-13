@@ -19,4 +19,5 @@ describe("class Statement()", () => {
     statement.transaction(account.withdraw(500));
     expect(statement.printStatement()).toEqual([1000, 2000, 1500]);
    })
+  
 });

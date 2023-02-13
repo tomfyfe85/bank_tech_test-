@@ -1,18 +1,11 @@
 // This separation of concerns needs to be applied. 
-// IE create new Transaction class and Date class as separate modules
+// IE create Date class as separate module
 
+// Use NewDate as module in the Account class
+// Tests should pass
+// UNIT Write withdrawal test/function 
 
-Date- 
-create new date class module
-//UNIT TEST Date
-
-Account & Transaction classes
-remove deposit and withdraw from account. Make a Transaction class.
-
-// INT TEST account/transaction/date
-Test deposit
-Test withdrawal 
-
+//UPDATE INT TEST TO EXPECT NEW STRING RESULTS IN STATEMENT
 
 Statement class must return data from other dates in correct order.
 Statement class must have a header at the top and not be repeated in
