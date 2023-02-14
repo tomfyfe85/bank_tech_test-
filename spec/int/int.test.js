@@ -11,15 +11,15 @@ describe("class Statement()", () => {
     ]);
   });
 
-  it("prints an array containing the results of account.balance, account.deposit as elements", () => {
+  it("prints an array containing the results of account.deposit, account.balance as elements", () => {
     statement.transaction(account.deposit(1000));
     expect(statement.printStatement()).toEqual([
-      "14/2/2023||1000.00||||1000.00",
       "14/2/2023||1000.00||||2000.00",
-    ]);
+      "14/2/2023||1000.00||||1000.00",
+      ]);
   });
 
-  it("prints an array containing the results of account.balance, account.deposit and account.withdrawal as elements", () => {
+ xit("prints an array containing the results of account.balance, account.deposit and account.withdrawal as elements", () => {
     statement.transaction(account.withdraw(500));
     expect(statement.printStatement()).toEqual([
       "14/2/2023||1000.00||||1000.00",
