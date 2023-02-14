@@ -38,8 +38,6 @@ To check statement:
 statement.printStatement()
 
 
-
-
 ### _This is written in JavaScript, to be run on node and tested with jest so please see below for installation guidance if needed so please use node to run_
 
 **Javascript install in command line:** <br/>
