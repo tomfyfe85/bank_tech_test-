@@ -1,5 +1,5 @@
 const Account = require("../../lib/Account");
-const account = new Account(1000);
+const account = new Account(0);
 const Statement = require("../../lib/Statement");
 const statement = new Statement();
 
@@ -7,15 +7,24 @@ describe("class Statement()", () => {
   it("(1) returns header, printStatement", () => {
     expect(statement.printBalance(account.returnBalance())).toEqual([
       "date || balance",
-      "14/2/2023 || 1000.00",
+      "14/2/2023 || 0.00",
     ]);
   });
 
   it("(2) prints an array containing the results of header, account.deposit, account.balance as elements", () => {
+    statement.transaction(account.deposit(1000.0));
+    expect(statement.printStatement()).toEqual([
+      "date || credit || debit || balance",
+      "14/2/2023 || 1000.00 |||| 1000.00",
+    ]);
+  });
+
+  it("(2.1) prints an array containing the results of header, account.deposit, account.balance as elements", () => {
     statement.transaction(account.deposit(2000.0));
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
       "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00"
     ]);
   });
 
@@ -25,6 +34,7 @@ describe("class Statement()", () => {
       "date || credit || debit || balance",
       "14/2/2023 |||| 500.00 || 2500.00",
       "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00"
     ]);
   });
 
@@ -35,6 +45,7 @@ describe("class Statement()", () => {
       "14/2/2023 || 1000.00 |||| 3500.00",
       "14/2/2023 |||| 500.00 || 2500.00",
       "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00"
     ]);
   });
 
@@ -46,6 +57,7 @@ describe("class Statement()", () => {
       "14/2/2023 || 1000.00 |||| 3500.00",
       "14/2/2023 |||| 500.00 || 2500.00",
       "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00"
     ]);
   });
 
@@ -62,6 +74,7 @@ describe("class Statement()", () => {
       "14/2/2023 || 1000.00 |||| 3500.00",
       "14/2/2023 |||| 500.00 || 2500.00",
       "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00"
     ]);
   });
 
