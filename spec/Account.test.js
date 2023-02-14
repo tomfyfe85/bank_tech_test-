@@ -1,5 +1,5 @@
 const Account = require("../lib/Account");
-const account = new Account(1000.00);
+const account = new Account(1000.0);
 
 // complete tests on other functions
 // Write more edge case tests
@@ -13,8 +13,6 @@ describe("class Account()", () => {
   });
 
   it("returns date, amount deposited, new balance after deposit", () => {
-    expect(account.withdraw(500)).toEqual(`14/2/2023||2000.00||||2500.00`);
+    expect(account.withdraw(500.0)).toEqual(`14/2/2023||||500.00||2500.00`);
   });
-}
-);
-
+});
