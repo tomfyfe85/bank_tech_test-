@@ -1,8 +1,4 @@
-// This separation of concerns needs to be applied. 
-// IE create Date class as separate module
 
-// Use NewDate as module in the Account class
-// Tests should pass
 // UNIT Write withdrawal test/function 
 
 //UPDATE INT TEST TO EXPECT NEW STRING RESULTS IN STATEMENT
