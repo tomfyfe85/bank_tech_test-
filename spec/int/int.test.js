@@ -7,7 +7,7 @@ describe("class Statement()", () => {
   it("(1) returns header, printStatement", () => {
     statement.transaction(account.returnBalance());
     expect(statement.printStatement()).toEqual([
-      "date || credit || debit || balance",
+      "date || balance",
       "14/2/2023 || 1000.00 |||| 1000.00",
     ]);
   });
@@ -73,7 +73,7 @@ describe("class Statement()", () => {
     ]);
   });
 
-  it("gives only the account balance", () => {
+  it("(7) gives only the account balance", () => {
     expect(statement.printBalance(account.returnBalance())).toEqual([
       "date || balance",
       "14/2/2023 || 3000.00",
