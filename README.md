@@ -1,8 +1,8 @@
 # bank_tech_test-
 
-UNFINISHED TECH TEST
+BANKING APP TECH TEST
 
-This a incomplete, very basic banking app. 
+A very basic banking app. 
 
 Below is the given criteria.
 
@@ -13,17 +13,32 @@ when she prints her bank statement then
 she would see:
 
 date || credit || debit || balance <br/>
-14/01/2023 || || 500.00 || 2500.00 <br/>
-13/01/2023 || 2000.00 || || 3000.00 <br/>
-10/01/2023 || 1000.00 || || 1000.00
+14/01/2023 |||| 500.00 || 2500.00 <br/>
+13/01/2023 || 2000.00 |||| 3000.00 <br/>
+10/01/2023 || 1000.00 |||| 1000.00
 
-Things I didn't do in the final app:
-add a withdrawal function,
-add date functionality,
-format so printStatement would look like the above when returned,
-added comments to help other devs in the future.
+To use:
+You will require the use of two of the app's classes:
+class Account,
+class Statement,
 
-Included is a file called bank.js which will give you an idea of what I was going for.
+To begin with an account balance of zero:
+new Account(0),
+
+To make a deposit:
+statement.transaction(account.deposit(enter amount in nums IE 500 or 23.434))
+
+To make a withdrawal:
+statement.transaction(account.withdraw(enter amount in nums IE 500 or 23.434))
+
+To check balance:
+statement.printBalance(account.returnBalance)
+
+To check statement:
+statement.printStatement()
+
+
+
 
 ### _This is written in JavaScript, to be run on node and tested with jest so please see below for installation guidance if needed so please use node to run_
 

@@ -49,7 +49,7 @@ describe("class Statement()", () => {
     ]);
   });
 
-  it("(5) returns correct output after another deposit", () => {
+  it("(5) returns correct output after another withdrawal", () => {
     statement.transaction(account.withdraw(500));
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
@@ -61,7 +61,7 @@ describe("class Statement()", () => {
     ]);
   });
 
-  it("(6) ", () => {
+  it("(6) Will return correct data after multiple transactions", () => {
     statement.printStatement();
     statement.transaction(account.withdraw(500));
     statement.transaction(account.deposit(500));
