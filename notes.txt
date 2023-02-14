@@ -1,5 +1,3 @@
-//UPDATE INT TEST TO EXPECT NEW STRINGS RESULTS IN STATEMENT
-
 Statement class must return data from other dates in correct order.
 Statement class must have a header at the top and not be repeated in
 the same instance
