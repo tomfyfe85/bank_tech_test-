@@ -8,16 +8,16 @@ describe("class Statement()", () => {
     statement.transaction(account.returnBalance());
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
-      "14/2/2023||1000.00||||1000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00",
     ]);
   });
 
   it("(2)prints an array containing the results of header, account.deposit, account.balance as elements", () => {
-    statement.transaction(account.deposit(1000));
+    statement.transaction(account.deposit(2000.0));
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
-      "14/2/2023||1000.00||||2000.00",
-      "14/2/2023||1000.00||||1000.00",
+      "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00",
     ]);
   });
 
@@ -25,9 +25,9 @@ describe("class Statement()", () => {
     statement.transaction(account.withdraw(500));
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
-      "14/2/2023||||500.00||1500.00",
-      "14/2/2023||1000.00||||2000.00",
-      "14/2/2023||1000.00||||1000.00",
+      "14/2/2023 |||| 500.00 || 2500.00",
+      "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00",
     ]);
   });
 });
