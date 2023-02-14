@@ -1,3 +1,3 @@
-make sure 2nd decimal place rounds down
+make 2nd decimal place round down
 
 
