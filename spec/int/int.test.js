@@ -73,9 +73,10 @@ describe("class Statement()", () => {
     ]);
   });
 
-  it("gives only the account balance", () {
-    expect(statement.printBalance()).toEqual([
-    "date || balance",
-    "14/2/2023 || 3000.00"])
-  })
+  it("gives only the account balance", () => {
+    expect(statement.printBalance(account.returnBalance())).toEqual([
+      "date || balance",
+      "14/2/2023 || 3000.00",
+    ]);
+  });
 });
