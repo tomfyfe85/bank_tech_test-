@@ -4,20 +4,27 @@ const Statement = require("../../lib/Statement");
 const statement = new Statement();
 
 describe("class Statement()", () => {
-  xit("returns printStatement", () => {
+  it("returns printStatement", () => {
     statement.transaction(account.returnBalance());
-    expect(statement.printStatement()).toEqual([1000]);
-  });
-  
-  xit("prints an array with orig balance and balance with new total after deposit", () => {
-    statement.transaction(account.deposit(1000));
-    expect(statement.printStatement()).toEqual([1000, 2000]);
+    expect(statement.printStatement()).toEqual([
+      "14/2/2023||1000.00||||1000.00",
+    ]);
   });
 
-   xit("prints an array with the orig balance and balance with new total after withdrawal", () => {
-    
+  it("prints an array containing the results of account.balance, account.deposit as elements", () => {
+    statement.transaction(account.deposit(1000));
+    expect(statement.printStatement()).toEqual([
+      "14/2/2023||1000.00||||1000.00",
+      "14/2/2023||1000.00||||2000.00",
+    ]);
+  });
+
+  it("prints an array containing the results of account.balance, account.deposit and account.withdrawal as elements", () => {
     statement.transaction(account.withdraw(500));
-    expect(statement.printStatement()).toEqual([1000, 2000, 1500]);
-   })
-  
+    expect(statement.printStatement()).toEqual([
+      "14/2/2023||1000.00||||1000.00",
+      "14/2/2023||1000.00||||2000.00",
+      "14/2/2023||||500.00||1500.00",
+    ]);
+  });
 });
