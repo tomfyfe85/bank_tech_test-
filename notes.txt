@@ -1,9 +1,11 @@
-Statement class must return data from other dates in correct order.
-Statement class must have a header at the top and not be repeated in
-the same instance
-New data should be entered in reverse order. 
+Header must be returned look it appears at the top of
+ the list of account transactions every time 
+ the function to print the statement is invoked.
 
-// INT TEST header appears last in array
+Data from previous invocations should not appear to be above the header,
+yet data from previous invocations should have changed accordingly.
+
+// INT TEST header appears first in array
 // INT TEST data is presented in reverse order
  
 
