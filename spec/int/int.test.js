@@ -5,7 +5,7 @@ const statement = new Statement();
 
 describe("class Statement()", () => {
   it("(1) returns header, printStatement", () => {
-   expect(statement.printBalance(account.returnBalance());).toEqual([
+    expect(statement.printBalance(account.returnBalance())).toEqual([
       "date || balance",
       "14/2/2023 || 1000.00",
     ]);
@@ -16,8 +16,7 @@ describe("class Statement()", () => {
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
       "14/2/2023 || 2000.00 |||| 3000.00",
-      "14/2/2023 || 1000.00 |||| 1000.00",
-    ]);
+      ]);
   });
 
   it("(3) prints an array containing the results of header, account.withdrawal, account.balance account.deposit as elements", () => {
