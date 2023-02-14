@@ -40,5 +40,17 @@ describe("class Statement()", () => {
       "14/2/2023 || 2000.00 |||| 3000.00",
       "14/2/2023 || 1000.00 |||| 1000.00",
     ]);
-  });
-});
+  })
+    
+  it("(5) returns correct output after another deposit", () => {
+    statement.transaction(account.withdraw(500));
+    expect(statement.printStatement()).toEqual([
+      "date || credit || debit || balance",
+      "14/2/2023 |||| 500.00 || 3000.00",
+      "14/2/2023 || 1000.00 |||| 3500.00",
+      "14/2/2023 |||| 500.00 || 2500.00",
+      "14/2/2023 || 2000.00 |||| 3000.00",
+      "14/2/2023 || 1000.00 |||| 1000.00",
+    ]);
+  })
+})
