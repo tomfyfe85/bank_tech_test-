@@ -5,8 +5,5 @@ Header must be returned look it appears at the top of
 Data from previous invocations should not appear to be above the header,
 yet data from previous invocations should have changed accordingly.
 
-// INT TEST header appears first in array
-// INT TEST data is presented in reverse order
- 
 
 
