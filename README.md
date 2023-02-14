@@ -17,24 +17,24 @@ date || credit || debit || balance <br/>
 13/01/2023 || 2000.00 |||| 3000.00 <br/>
 10/01/2023 || 1000.00 |||| 1000.00
 
-To use:
-You will require the use of two of the app's classes:
-class Account,
+To use:<br/>
+You will require the use of two of the app's classes:<br/>
+class Account,<br/>
 class Statement,
 
-To begin with an account balance of zero:
+To begin with an account balance of zero: <br/>
 new Account(0),
 
-To make a deposit:
+To make a deposit: <br/>
 statement.transaction(account.deposit(enter amount in nums IE 500 or 23.434))
 
-To make a withdrawal:
+To make a withdrawal: <br/>
 statement.transaction(account.withdraw(enter amount in nums IE 500 or 23.434))
 
-To check balance:
+To check balance:<br/>
 statement.printBalance(account.returnBalance)
 
-To check statement:
+To check statement:<br/>
 statement.printStatement()
 
 
