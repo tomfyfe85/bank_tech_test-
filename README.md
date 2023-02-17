@@ -31,12 +31,17 @@ statement.transaction(account.deposit(enter amount in nums IE 500 or 23.434))
 To make a withdrawal: <br/>
 statement.transaction(account.withdraw(enter amount in nums IE 500 or 23.434))
 
-To check balance:<br/>
-statement.printBalance(account.returnBalance)
+To see the balance or statement in the format as per the criteria, you must assign the function to a 
+variable and use console.log and .join('\n') in the following way (of course to view the statement multiple 
+times in this way, one must use a new variable each time. I would suggest using 'statementView1', 'statementView2', 'balanceView1'... etc)
 
 To check statement:<br/>
-statement.printStatement()
+const statementView1 = statement.printStatement()
+console.log(statementView1.join('\n'))
 
+To check balance:<br/>
+const balanceView1 = statement.printBalance(account.returnBalance)
+console.log(balanceView1.join('\n'))
 
 ### _This is written in JavaScript, to be run on node and tested with jest so please see below for installation guidance if needed. Please use node to run.
 
