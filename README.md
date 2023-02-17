@@ -3,6 +3,7 @@
 BANKING APP TECH TEST
 
 A very basic banking app. 
+(Note, this app requires a basic working knowledge of Javascript for use)
 
 Below is the given criteria.
 
