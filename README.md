@@ -3,7 +3,15 @@
 BANKING APP TECH TEST
 
 A very basic banking app. 
-(Note, this app requires a basic working knowledge of Javascript for use)
+(Note, this app requires a basic working knowledge of Javascript for use).
+
+To install:
+CD to the directory on your machine that you'd like the app to be in.
+
+Once there enter the following into your command line:
+git clone https://github.com/tomfyfe85/bank_tech_test- 
+
+CD into bank_tech_test-
 
 Below is the given criteria.
 
